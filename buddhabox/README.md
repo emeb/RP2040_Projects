@@ -22,7 +22,13 @@ The new buddhabox board comprises an RP2040 MCU with micro USB connector, 4MB QS
 
 ![](./doc/pcb_top.png)
 
+### Design Materials
+
 [Schematic PDF](./doc/schematic.pdf)
+
+[PCB at OSHPark](https://oshpark.com/shared_projects/EMfbYZtG)
+
+[BOM](./doc/buddhabox_BOM.ods)
 
 ### Caveats
 
@@ -30,11 +36,13 @@ Although the board design works, there are a few "gotchas" to be aware of:
 
 1. The circuit includes an option to power the board from the USB port which doesn't work properly - I'd assumed that the U1 battery boost regulator could regulate when driven with 5V USB power, but it doesn't regulate in that condition and merely passes the 5V straight thru to the 3.3V rail. To prevent this lift the VBUS leg of D1.
 
-2. The back of the speaker rests immediately under the lower edge of the PCB and could short out some of the header connectors. To prevent this trim the connector leads flush with the back of the board and insulate the back of the speaker with tape. 
+2. The back of the speaker rests immediately under the lower edge of the PCB and could short out some of the header connectors. To prevent this trim the connector leads flush with the back of the board and insulate the back of the speaker with tape.
+
+3. The power/volume thumbwheel is a bit hard to find. I bought mine here: [Radio Volume Controls at AliExpress](https://www.aliexpress.us/item/3256801655864095.html)
 
 ## Firmware
 
-The included firmware provides a DMA-driven 8kSPS 8-bit PWM output that can be driven with loops of audio or synthesized sources selected sequentially by pressing the external button. As initially configured there are four loops derived from various musical cuts, followed by several tone and noise generators. Code can be loaded via SWD or USB, but in either approach the case must be opened to access the boot button and/or SWD connections.
+The included firmware provides a IRQ-driven 11kSPS 8-bit PWM output that can be driven with loops of audio or synthesized sources selected sequentially by pressing the external button. As initially configured there are four loops derived from various musical cuts, followed by several tone and noise generators. Code can be loaded via SWD or USB, but in either approach the case must be opened to access the boot button and/or SWD connections.
 
 ## Going Further
 
