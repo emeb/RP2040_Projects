@@ -22,6 +22,8 @@ The new buddhabox board comprises an RP2040 MCU with micro USB connector, 4MB QS
 
 ![](./doc/pcb_top.png)
 
+[Schematic PDF](./doc/schematic.pdf)
+
 ### Caveats
 
 Although the board design works, there are a few "gotchas" to be aware of:
