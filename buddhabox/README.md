@@ -49,3 +49,7 @@ The included firmware provides a IRQ-driven 11kSPS 8-bit PWM output that can be 
 Future revisions of the board design should address the items mentioned in "Caveats" above. It might also be interesting to replace the PWM output with an I2S speaker driver for "higher fidelity".
 
 Firmware could be augmented to automatically detect when USB is attached and allow downloading new loops without fully reloading the entire code base.
+
+## Related Projects
+
+[Aleatorium](https://github.com/jonbro/aleatorium/) A fork/extension with better audio output circuits and a scriptable synth that includes an editor. Definitely worth a look.
